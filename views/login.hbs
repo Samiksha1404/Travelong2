@@ -1,0 +1,330 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> Log In </h2>
+
+    <form action="/login" method="post">
+    <input type="text" name="name"placeholder="Name">
+    <input type="password" name="password"placeholder="Password">
+    <input type="submit">
+   
+    </form>
+
+    <a href="/signup">Make a new account </a>
+</body>
+</html> --}}
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./login3.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap"
+    />
+
+  </head>
+
+<style>
+    .group-child {
+  position: absolute;
+  top: calc(50% - 346px);
+  left: calc(50% - 259px);
+  border-radius: 42px;
+  background-color: #f9f5f5;
+  box-shadow: 10px 10px 28px rgba(0, 0, 0, 0.25);
+  width: 446px;
+  height: 620px;
+
+  }
+  .group-inner,
+  .group-item {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 228px);
+    border-radius: var(--br-mid);
+    width: 464px;
+    height: 95px;
+  }
+  .group-inner {
+    top: calc(50% - 125px);
+  }
+  .email-id,
+  .password,
+  .user-login {
+    position: absolute;
+    display: inline-block;
+  }
+  .user-login {
+    top: calc(50% - 325px);
+    left: calc(50% - 184px);
+    font-size: 65px;
+    font-family: var(--font-abhaya-libre);
+    width: 396px;
+    height: 80px;
+  }
+  .input-box {
+    top: calc(50% - 101px);
+    left: calc(50% - 129px);
+    letter-spacing: -0.01em;
+    line-height: 44px;
+    font-weight: 300;
+    color: var(--color-dimgray);
+    width: 129px;
+    height: 50px;
+  }
+  .password {
+    top: calc(50% + 10px);
+    width: 157px;
+  }
+  .clarityuser-solid-icon,
+  .icround-lock-icon {
+    position: absolute;
+    top: calc(50% - 97px);
+    left: calc(50% - 202px);
+    width: 42px;
+    height: 30px;
+    overflow: hidden;
+  }
+  .icround-lock-icon {
+    top: calc(50% + 19px);
+    height: 25px;
+  }
+  .rectangle-icon {
+    position: absolute;
+    top: calc(50% + 111px);
+    left: calc(50% - 228px);
+    border-radius: 35px;
+    width: 464px;
+    height: 109px;
+  }
+  .input-text
+  {
+    
+    width: 332px;
+    height: 48px;
+    border-radius: 12px;
+    /* background-color: #cbc7c7; */
+    border: solid #E0D8D8;
+    background-color: #E0D8D8;
+    box-shadow: 2px 4px 12px;
+    font-size: large;
+    padding-left: 42px;
+  }
+  .input-text:hover
+  {
+    background-color: #c7c2c2;
+  }
+  .input-text::placeholder
+  {
+   pointer-events: none;
+   cursor: pointer;
+  }
+  .input-text input:focus~::placeholder,
+  .input-text input :valid~::placeholder
+  {
+    top:-5px;
+  }
+  .login {
+    position: absolute;
+    top: calc(50% + 141px);
+    left: calc(50% - 180px);
+    font-size: 25px;
+    letter-spacing: -0.01em;
+    line-height: 44px;
+    font-weight: 300;
+    display: inline-block;
+    width: 355px;
+    height: 61px;
+    border-radius: 107px;
+    /* background-color: #cbc7c7; */
+    border: solid #E0D8D8;
+    background-color: #E0D8D8;
+    box-shadow: 2px 4px 12px;
+    cursor: pointer;
+}
+.login:hover
+{
+background-color: #eadeae;
+
+}
+.remember-forget{
+ font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 0px;
+    font-weight: 300;
+    margin: 114px 19px;
+}
+.remember-forget:hover{
+  font-size:15px;
+}
+.remember-forget a{
+  text-decoration: none;
+  padding: 10px 2px ;
+}
+.remember-forget a:hover
+{
+  text-decoration: underline;
+}
+  
+ .form-box-login{
+    position: absolute;
+    top: calc(50% + -171px);
+    left: calc(50% - 226px);
+    font-size: 37px;
+    letter-spacing: -0.01em;
+    line-height: 44px;
+    font-weight: 300;
+    display: inline-block;
+    width: 381px;
+    height: 300px;
+  }
+
+  element.style {
+    width: 370px;
+    height: 48px;
+    border-radius: 12px;
+    /* background-color: #cbc7c7; */
+    border: solid #E0D8D8;
+    background-color: #E0D8D8;
+    box-shadow: 2px 4px 12px;
+}
+  .input-box-form{
+    width: 200px; ;
+    height: 129px;
+  }
+  .rectangle-parent {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 395px);
+    left: calc(50% - 104px);
+    width: 518px;
+    height: 850px;
+  }
+  .login-container-child {
+    position: absolute;
+    top: 588px;
+    left: -480px;
+    border-radius: 50%;
+    background-color: #bbb7b7;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.25);
+    width: 434px;
+    height: 191px;
+  }
+  .login-container-inner,
+  .login-container-item {
+    position: absolute;
+    top: 9px;
+    left: -882px;
+    border-radius: 50%;
+    background-color: #eae7ab;
+    box-shadow: 4px 4px 47px rgba(0, 0, 0, 0.25);
+    width: 703px;
+    height: 919px;
+  }
+  .login-container-inner {
+    top: 643px;
+    left: -614px;
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 49px rgba(0, 0, 0, 0.25) inset;
+    width: 404px;
+    height: 233px;
+  }
+  .login-container {
+    position: relative;
+    background-color: #f3efd5;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-6xl);
+    color: var(--color-black);
+    font-family: var(--font-akshar);
+  }
+  
+</style>
+
+  <body>
+    <div class="login-container">
+      <div class="rectangle-parent">
+        <div class="group-child"></div>
+        
+        <!-- login container -->
+        <b class="user-login">User Login</b>
+        
+        <!-- form -->
+        <div class ="form-box-login ">
+        <form action="/login" method="POST">
+        <div class="input-box-form">
+          <span class ="icon "><ion-icon name="mail"></ion-icon></span>
+          <input class =" input-text "type="email" placeholder="Email Id"  required> 
+        </div>
+
+        <div class="input-box-form">
+          <span class ="icon "><ion-icon name="lock-closed"></ion-icon></span>
+          <input  class =" input-text" type="password" placeholder="Password" required> 
+        </div> 
+          
+          
+        <button type="submit" class="login" >LOGIN</button>
+          
+        
+        
+        <div class="remember-forget">
+            <p>Don't have an account yet?
+            <a href="/signup"> signUp</a>
+            </p>
+           </div>
+        </form> 
+      </div>
+      
+      <!-- <div class="login">
+        <button>LOGIN</button></div> -->
+        <!-- <div class="forget-username-password">Forget Username Password?</div> -->
+      
+
+
+       <div class="login-container-child"></div>
+      <div class="login-container-item"></div>
+      <div class="login-container-inner"></div> 
+
+
+      
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        {{!-- <script>
+          // form loading animation
+
+           const form = [...document.querySelector('.form').children];
+
+           form.forEach((item, i) => {
+           setTimeout(() => {
+           item.style.opacity = 1;
+           }, i*100);
+           })
+        </script> --}}
+    </div>
+  </body>
+</html>
